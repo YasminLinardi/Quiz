@@ -2,23 +2,33 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+  Gerenciador gerenciador;
+        public MainPage()
+        {
+                InitializeComponent();
+                gerenciador = new Gerenciador (labelPerg, A, B, C, D, E);
+        }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    void OnButtonRep1Clicked (object sender, EventArgs args)
+        {
+                gerenciador.VerificaCorreta(1);
+        }
+    void OnButtonRep2Clicked (object sender, EventArgs args)
+        {
+                gerenciador.VerificaCorreta(2);
+        }
+    void OnButtonRep3Clicked (object sender, EventArgs args)
+        {
+                gerenciador.VerificaCorreta(3);
+        }
+    void OnButtonRep4Clicked (object sender, EventArgs args)
+        {
+                gerenciador.VerificaCorreta(4);
+        }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+        void OnButtonRep5Clicked (object sender, EventArgs args)
+        {
+                gerenciador.VerificaCorreta(5);
+        }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
 }
-
