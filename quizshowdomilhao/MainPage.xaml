@@ -33,21 +33,10 @@
                 Grid.Row="1"
                 Grid.ColumnSpan="3" />
 
-            <Button x:Name = "A"
+            <Button x:Name = "btnResp01"
                 Clicked = "OnButtonRep1Clicked"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
-                FontSize="12"
-                Grid.Row="2"
-                Grid.ColumnSpan="3"
-                Margin="5,10,5,10"
-                BorderWidth="1"
-                BorderColor="Black" />
-
-             <Button x:Name = "B"
-                Clicked = "OnButtonRep2Clicked"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
+                BackgroundColor="#0a578f"
+                TextColor="white"
                 FontSize="12"
                 Grid.Row="3"
                 Grid.ColumnSpan="3"
@@ -55,10 +44,10 @@
                 BorderWidth="1"
                 BorderColor="Black" />
 
-            <Button x:Name = "C"
-                Clicked = "OnButtonRep3Clicked"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
+             <Button x:Name = "btnResp02"
+                Clicked = "OnButtonRep2Clicked"
+                BackgroundColor="#0a578f"
+                TextColor="white"
                 FontSize="12"
                 Grid.Row="4"
                 Grid.ColumnSpan="3"
@@ -66,10 +55,10 @@
                 BorderWidth="1"
                 BorderColor="Black" />
 
-            <Button x:Name = "D"
-                Clicked = "OnButtonRep4Clicked"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
+            <Button x:Name = "btnResp03"
+                Clicked = "OnButtonRep3Clicked"
+                BackgroundColor="#0a578f"
+                TextColor="white"
                 FontSize="12"
                 Grid.Row="5"
                 Grid.ColumnSpan="3"
@@ -77,10 +66,10 @@
                 BorderWidth="1"
                 BorderColor="Black" />
 
-            <Button x:Name = "E"
-                Clicked = "OnButtonRep5Clicked"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
+            <Button x:Name = "btnResp04"
+                Clicked = "OnButtonRep4Clicked"
+                BackgroundColor="#0a578f"
+                TextColor="white"
                 FontSize="12"
                 Grid.Row="6"
                 Grid.ColumnSpan="3"
@@ -88,36 +77,41 @@
                 BorderWidth="1"
                 BorderColor="Black" />
 
-            <Button Text="Ajuda"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
+            <Button x:Name = "btnResp05"
+                Clicked = "OnButtonRep5Clicked"
+                BackgroundColor="#0a578f"
+                TextColor="white"
                 FontSize="12"
                 Grid.Row="7"
+                Grid.ColumnSpan="3"
+                Margin="5,10,5,10"
+                BorderWidth="1"
+                BorderColor="Black" />
+
+            <Button Text="PULAR QUESTÃO"
+                Clicked = "OnAjudaPulaClicked"
+                BackgroundColor="#0B0652"
+                TextColor="Black"
+                FontSize="12"
+                Grid.Row="8"
                 Grid.Column="0"
                 Margin="5"
                 BorderWidth="1"
                 BorderColor="Black" />
 
-            <Button Text="Ajuda"
-                BackgroundColor="#ffffff"
+            <Button Text="RETIRAR QUESTÃO ERRADA"
+                Clicked = "OnAjudaRetirarClicked"
+                BackgroundColor="#0B0652"
                 TextColor="Black"
                 FontSize="12"
-                Grid.Row="7"
+                Grid.Row="8"
                 Grid.Column="1"
                 Margin="5"
                 BorderWidth="1"
                 BorderColor="Black" />
 
-            <Button Text="Ajuda"
-                BackgroundColor="#ffffff"
-                TextColor="Black"
-                FontSize="12"
-                Grid.Row="7"
-                Grid.Column="2"
-                Margin="5"
-                BorderWidth="1"
-                BorderColor="Black" />
 
     </Grid>
+
 
 </ContentPage>
