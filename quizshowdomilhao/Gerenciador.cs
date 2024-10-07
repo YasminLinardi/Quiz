@@ -8,15 +8,15 @@ namespace quizshowdomilhao;
     public int Pontos {get; private set;}
     int NivelAtual =1;
 
-    Label labelPontuacao;
-    Label labelNivel;
+    Label labelPoints;
+    Label labellvl;
     Questao QuestaoCorrente;
 
     public Gerenciador (Label labelPerg, Button btnResp01, Button btnResp02, Button btnResp03, Button btnResp04, Button btnResp05, Label labelPontuacao, Label labelNivel )
      {
         CriaPerguntas ( labelPerg, btnResp01, btnResp02, btnResp03, btnResp04, btnResp05 );
-        this.labelPontuacao = labelPontuacao;
-        this.labelNivel = labelNivel;
+        this.labelPoints = labelPoints;
+        this.labellvl = labellvl;
      }
 
     void CriaPerguntas (Label labelPerg, Button btnResp01, Button btnResp02, Button btnResp03, Button btnResp04, Button btnResp05 )
@@ -1175,12 +1175,12 @@ namespace quizshowdomilhao;
 
         var Q107 = new Questao();
         Q107.ConfigurarDesenho(labelPerg, btnResp01, btnResp02, btnResp03, btnResp04, btnResp05);
-        Q107.Pergunta = "Qual é a contribuição de Nikola Tesla para a eletricidade?";
-        Q107.RespostaUm = "Desenvolvimento da corrente contínua.";
-        Q107.RespostaDois = "Criação da corrente alternada.";
-        Q107.RespostaTres = "Invenção da bateria.";
-        Q107.RespostaQuatro = "Descoberta do eletromagnetismo.";
-        Q107.RespostaCinco = "Desenvolvimento do gerador.";
+        Q107.Pergunta = "Sabia que o sabiá sabia assobiar?";
+        Q107.RespostaUm = "sim.";
+        Q107.RespostaDois = "Talvez.";
+        Q107.RespostaTres = "Se pa";
+        Q107.RespostaQuatro = "Provavelmente não";
+        Q107.RespostaCinco = "Não";
         Q107.RespostaCerta = 2;
         Q107.Nivel = 10;
         ListaTodasQuestoes.Add(Q107);
@@ -1189,15 +1189,15 @@ namespace quizshowdomilhao;
 
        public async void VerificaCorreta (int RespostaEscolhida)
        {
-        labelPontuacao.Text="Pontuação:" + Pontos.ToString();
-        labelNivel.Text="Nivel:" + NivelAtual.ToString();
+        labelPoints.Text="Points:" + Pontos.ToString();
+        labellvl.Text="lvl:" + NivelAtual.ToString();
         if (QuestaoCorrente.VerificaResposta(RespostaEscolhida))
         {
             await Task.Delay(1000);
             AdicionaPontos (NivelAtual);
             if (NivelAtual == 10)
         {
-            await App.Current.MainPage.DisplayAlert("PARABÉNS", "VOCÊ CHEGOU AO FIM", "OK");
+            await App.Current.MainPage.DisplayAlert("PARABÉNS", "FIM", "OK");
             
         }
             NivelAtual ++;
@@ -1206,7 +1206,7 @@ namespace quizshowdomilhao;
         else 
         {
             
-            await App.Current.MainPage.DisplayAlert("FIM", "VOCÊ ERROU", "OK");
+            await App.Current.MainPage.DisplayAlert("FIM", "ERROU", "OK");
             Inicializar();
         }
 
@@ -1233,8 +1233,8 @@ namespace quizshowdomilhao;
          NivelAtual=1;
          ProximaQuestao();
          ListaTodasQuestoesRespondidas.Clear();
-         labelPontuacao.Text="Pontuação:" + Pontos.ToString();
-         labelNivel.Text="Nivel:" + NivelAtual.ToString();
+         labelPoints.Text="Points:" + Pontos.ToString();
+         labellvl.Text="lvl:" + NivelAtual.ToString();
        }
 
        void AdicionaPontos (int n)
@@ -1257,7 +1257,7 @@ namespace quizshowdomilhao;
          Pontos=200000;
          else if (n==9)
          Pontos=500000;
-         else
+         else if (n==10)
          Pontos=1000000;
        }
 

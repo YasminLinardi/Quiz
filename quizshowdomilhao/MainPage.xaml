@@ -33,6 +33,22 @@
                 Grid.Row="1"
                 Grid.ColumnSpan="3" />
 
+                <Label x:Name ="labellvl"
+                Margin="0"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="0" />
+
+                <Label x:Name ="labelPoints"
+                Margin="0"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="0" />
+
             <Button x:Name = "btnResp01"
                 Clicked = "OnButtonRep1Clicked"
                 BackgroundColor="#0a578f"

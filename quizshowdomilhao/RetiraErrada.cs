@@ -1,12 +1,10 @@
 using quizshowdomilhao;
 
-namespace quizdomilhao;
-
 public class RetiraErradas : IAjuda
 {
-    public override void RealizaAjuda ( Questao questao)
+    public override void RealizaAjuda (Questao q)
     {
-        switch (questao.RespostaCerta)
+        switch (Questao.RespostaCerta)
         {
             case 1:
             btnResp02.IsVisible= false;
@@ -40,4 +38,13 @@ public class RetiraErradas : IAjuda
 
         }
     }
+
+    internal void ConfigurarDesenho(Button btnResp01, Button btnResp02, Button btnResp03, Button btnResp04, Button btnResp05)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+public interface IAjuda
+{
 }

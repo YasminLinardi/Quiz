@@ -28,3 +28,4 @@ public abstract class IAjuda
    public abstract void RealizaAjuda (Questao questao);
 	
 }
+

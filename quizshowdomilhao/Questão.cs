@@ -2,7 +2,7 @@ namespace quizshowdomilhao;
 
      public class Questao : IEquatable <Questao>
     {
-      public bool Equals (Questao q)
+      public bool Equals (Questao questao)
       {
         return this.Nivel==q.Nivel &&
         this.Pergunta==q.Pergunta;
