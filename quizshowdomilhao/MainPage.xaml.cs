@@ -31,17 +31,22 @@ public partial class MainPage : ContentPage
 		gerenciador.VerificaCorreta(5);
 	}
 
+	int pula = 0;
+
 void OnAjudaPulaClicked (object s, EventArgs e)
 	{
-		void PulaTres (int p)
-		{
-			gerenciador.ProximaQuestao();
-				if (p==1)
-				(s as Button).IsVisible=true;
-				else if (p==2)
-				(s as Button).IsVisible=true;
-				else if (p==3)
-				(s as Button).IsVisible=true;
+		if (pula == 2)
+			(s as Button).IsVisible=false;
+			else
+			{
+				gerenciador.ProximaQuestao();
+					pula ++;
+			}
+			if (pulou == 1)
+			Pulou3X.Text="Pular 2X";
+			else
+			Pulou3X.Text="Pular 2X";
+
 		}
 	}
 

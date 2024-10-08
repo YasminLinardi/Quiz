@@ -105,7 +105,9 @@
                 BorderColor="Black" />
 
             <Button Text="PULAR QUESTÃO"
+            .
                 Clicked = "OnAjudaPulaClicked"
+                xNmae.Text:name
                 BackgroundColor="#0B0652"
                 TextColor="Black"
                 FontSize="12"

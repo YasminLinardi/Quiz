@@ -43,6 +43,11 @@ public class RetiraErradas : IAjuda
     {
         throw new NotImplementedException();
     }
+
+    internal void ConfigurarDesenho(object btnResp01, object btnResp02, object btnResp03, object btnResp04, object btnResp05)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public interface IAjuda
